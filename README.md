@@ -36,15 +36,20 @@ FUTURE Work:
 ------------
  
 1-	Building a stronger key-based permutation generator.
+
 2-	Using more parameters of the MOD4 method.
+
 3-	Adding other methods such as the F5 method.
+
 4-	Adding an encryption layer in addition to the steganography layer.
 
 
 WEBSITE:
 --------
 
-Basic Diagrams, GUI Screenshots, and Binaries Download are accessed from the Home Page: http://m4jpeg.digitalsd.net
+Basic Diagrams, GUI Screenshots, and Binaries Download are accessed from the Home Page:
+
+http://m4jpeg.digitalsd.net
 
 
 
