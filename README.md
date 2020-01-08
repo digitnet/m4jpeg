@@ -62,5 +62,4 @@ REFERENCES:
 
 [2]      Phil Sallee. “Matlab JPEG Toolbox”: Original package: jpegtbx_1.4, Sep 2003.
          Download link: 
-         
          http://dde.binghamton.edu/download/jpeg_toolbox.zip
