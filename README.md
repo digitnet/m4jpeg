@@ -12,7 +12,7 @@ NOTES ABOUT USE:
 
 1- The StartGUI files (.m, .fig) are the starting ones. StartGUI.m represents the main GUI that calls all other GUIs and required functions.
 
-2- The pre-compiled MEX files ( .dll ) perform the lossless compression steps and the entropy coding and decoding. The included .dll files are 
+2- The pre-compiled MEX files ( .dll ) perform the lossless compression steps including the entropy coding and decoding. The included .dll files are 
    old Matlab-compiled according to the 32-bit system. But, the zip file of jpeg_toolbox contains new Matlab-compiled files according to 32-bit 
    and 64-bit systems [2].
 
