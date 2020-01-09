@@ -31,7 +31,7 @@ ABOUT THE CURRENT VERSION (M4JPEG Ver 1.4) - STARTING VERSION:
 
 5-	The main used key (at least 12 Char) is NOT saved or stored in any form in the generated Stego JPEG file.
         Thus, during the extraction process, M4JPEG can not recognize whether the entered key matches the used one.
-        If the entered key is not the same as the used one, the extracted file will contain meaningless rubbish data.
+        If the entered key is NOT the same as the used one, the extracted file will contain meaningless rubbish data.
 
 6-	We use the toolbox of Phil Sallee[2]. Sallee’s toolbox makes easier to access and manipulate the qDCT coefficients of 
         a given JPEG file. The main two functions perform the standard steps of lossless compression, including Huffman Coding and decoding.
