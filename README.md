@@ -3,7 +3,7 @@
 ABOUT M4JPEG:
 -------------
 
-M4JPEG project aims to build and develop a FREE Matlab-compiled steganography tool working in the field of JPEG images.
+M4JPEG project aims to build and develop a Matlab-compiled steganography tool working in the field of JPEG images.
 The provided M4JPEG tool lets the user hide a private file within a JPEG image using an adaptive steganographic method called Mod4[1].
 
 
@@ -17,8 +17,8 @@ NOTES ABOUT USE:
    and 64-bit systems [2].
 
 
-ABOUT THE CURRENT VERSION (M4JPEG Ver 1.4) - STARTING VERSION:
---------------------------------------------------------------
+ABOUT THE CURRENT VERSION (M4JPEG Ver 1.4):
+-------------------------------------------
 
 1-	The current version of M4JPEG doesn’t include an encryption layer, thus the file we want to hide is not encrypted before the embedding process. 
         The security of the hiding layer is performed by using a key-based permutation generator.
