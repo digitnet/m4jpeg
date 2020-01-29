@@ -9,10 +9,13 @@ The provided M4JPEG tool lets the user hide a private file within a JPEG image u
 THE EXISTING FOLDERS:
 ---------------------
 
-1- block_diagram: contains the basic block diagrams of embedding and extracting processes.
-2- gui_screenshots: contains the main screenshots.
-3- phil_sallee_toolbox: contains the Sallee's toolbox.
-4- src_code: contains the source code;  .m , .fig, and .mexwXX files.
+block_diagram: contains the basic block diagrams of embedding and extracting processes.
+
+gui_screenshots: contains the main screenshots.
+
+phil_sallee_toolbox: contains the Sallee's toolbox.
+
+src_code: contains the source code;  .m , .fig, and .mexwXX files.
 
 NOTES ABOUT USE:
 ----------------
@@ -49,7 +52,7 @@ REFERENCES:
 [1]      KokSheik Wong, Xiaojun Qi, Kiyoshi Tanaka. “A DCT-based Mod4 
          Steganographic Method”: Signal Processing 87, 1251–1263, 2007.
 
-[2]      Phil Sallee. “Matlab JPEG Toolbox”: Original package: jpegtbx_1.4, Sep 2003.
+[2]      Phil Sallee. “Matlab JPEG Toolbox”,Sep 2003.
          Download link:
 
 http://dde.binghamton.edu/download/jpeg_toolbox.zip
