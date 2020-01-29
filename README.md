@@ -29,8 +29,8 @@ several systems.
 ABOUT THE CURRENT VERSION (M4JPEG Ver 1.4):
 -------------------------------------------
 
-1-	The current version of M4JPEG doesn’t include an encryption layer, thus the file we want to hide is not encrypted before the embedding process. 
-        The security of the hiding layer is performed by using a key-based permutation generator.
+1-	The current version of M4JPEG doesn’t include an encryption layer, thus the file we want to hide is not encrypted before the embedding process.
+        The hiding layer is protected by using a key-based permutation generator.
 
 2-	The permutation generator is based on a Matlab built-in pseudo-random generator.
 
