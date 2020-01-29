@@ -9,13 +9,13 @@ The provided M4JPEG tool lets the user hide a private file within a JPEG image u
 THE EXISTING FOLDERS:
 ---------------------
 
-block_diagram: contains the basic block diagrams of embedding and extracting processes.
+*block_diagram*: Contains the basic block diagrams of embedding and extracting processes.
 
-gui_screenshots: contains the main screenshots.
+*gui_screenshots*: Contains the main screenshots.
 
-phil_sallee_toolbox: contains the Sallee's toolbox.
+*phil_sallee_toolbox*: Contains the Sallee's toolbox.
 
-src_code: contains the source code;  .m , .fig, and .mexwXX files.
+*src_code*: Contains the source code;  .m , .fig, and .mexwXX files.
 
 NOTES ABOUT USE:
 ----------------
@@ -26,7 +26,7 @@ NOTES ABOUT USE:
 several systems.
 
 
-ABOUT THE CURRENT VERSION (M4JPEG Ver 1.4):
+ABOUT THE CURRENT VERSION - M4JPEG Ver 1.4:
 -------------------------------------------
 
 1-	The current version of M4JPEG doesn’t include an encryption layer, thus the file we want to hide is not encrypted before the embedding process.
