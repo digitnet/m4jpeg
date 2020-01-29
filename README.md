@@ -6,15 +6,21 @@ ABOUT M4JPEG:
 M4JPEG project aims to build and develop a Matlab-compiled steganography tool working in the field of JPEG images.
 The provided M4JPEG tool lets the user hide a private file within a JPEG image using an adaptive steganographic method called Mod4[1].
 
+THE EXISTING FOLDERS:
+---------------------
+
+1- block_diagram: contains the basic block diagrams of embedding and extracting processes.
+2- gui_screenshots: contains the main screenshots.
+3- phil_sallee_toolbox: contains the Sallee's toolbox.
+4- src_code: contains the source code;  .m , .fig, and .mexwXX files.
 
 NOTES ABOUT USE:
 ----------------
 
 1- The StartGUI files (.m, .fig) are the starting ones. StartGUI.m represents the main GUI that calls all other GUIs and required functions.
 
-2- The pre-compiled MEX files ( .dll ) perform the lossless compression steps including the entropy coding and decoding. The included .dll files are 
-   old Matlab-compiled according to the 32-bit system. But, the zip file of jpeg_toolbox contains new Matlab-compiled files according to 32-bit 
-   and 64-bit systems [2].
+2- The pre-compiled MEX files (.mexwXX) perform the lossless compression steps including the entropy coding and decoding. The zip file of jpeg_toolbox contains pre-Matlab-compiled MEX files according to 
+several systems.
 
 
 ABOUT THE CURRENT VERSION (M4JPEG Ver 1.4):
@@ -31,18 +37,10 @@ ABOUT THE CURRENT VERSION (M4JPEG Ver 1.4):
 
 5-	The main used key (at least 12 Char) is NOT saved or stored in any form in the generated Stego JPEG file.
         Thus, during the extraction process, M4JPEG can not recognize whether the entered key matches the used one.
-        If the entered key is NOT the same as the used one, the extracted file will contain meaningless rubbish data.
+        If the entered key is NOT the same as the used one, the extracted file will contain meaningless data.
 
 6-	We use the toolbox of Phil Sallee[2]. Sallee’s toolbox makes easier to access and manipulate the qDCT coefficients of 
         a given JPEG file. The main two functions perform the standard steps of lossless compression, including Huffman Coding and decoding.
-
-
-BINARIES DOWNLOAD:
-------------------
-
-Basic Diagrams, GUI Screenshots, and Binaries Download are accessed from the Home Page:
-
-http://m4jpeg.digitalsd.net
 
 
 REFERENCES:
