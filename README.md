@@ -54,3 +54,6 @@ REFERENCES:
 
 [2]      Phil Sallee. “Matlab JPEG Toolbox”,Sep 2003.
          Download link: http://dde.binghamton.edu/download/jpeg_toolbox.zip
+
+
+[![View M4JPEG on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://uk.mathworks.com/matlabcentral/fileexchange/74063-m4jpeg)
