@@ -6,6 +6,9 @@ ABOUT M4JPEG:
 M4JPEG project aims to build and develop a Matlab-compiled steganography tool working in the field of JPEG images.
 The provided M4JPEG tool lets the user hide a private file within a JPEG image using an adaptive steganographic method called Mod4[1].
 
+[![View M4JPEG on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://uk.mathworks.com/matlabcentral/fileexchange/74063-m4jpeg)
+
+
 THE EXISTING FOLDERS:
 ---------------------
 
@@ -55,5 +58,3 @@ REFERENCES:
 [2]      Phil Sallee. “Matlab JPEG Toolbox”,Sep 2003.
          Download link: http://dde.binghamton.edu/download/jpeg_toolbox.zip
 
-
-[![View M4JPEG on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://uk.mathworks.com/matlabcentral/fileexchange/74063-m4jpeg)
