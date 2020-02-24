@@ -55,16 +55,3 @@ REFERENCES:
 
 [2]      Phil Sallee. “Matlab JPEG Toolbox”,Sep 2003.
          Download link: http://dde.binghamton.edu/download/jpeg_toolbox.zip
-
-=======
-# m4jpeg-tool
-A JPEG-Based Steganography Tool
-it is good 
-
-[![View M4JPEG Steganography on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://uk.mathworks.com/matlabcentral/fileexchange/74063-m4jpeg-steganography)
-
-nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
->>>>>>> 6b9411187f4e0b65f6fd36dee51a5c3e9c656f4a
