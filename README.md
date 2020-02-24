@@ -15,7 +15,7 @@ several systems.
 ABOUT THE CURRENT VERSION - M4JPEG Ver 1.4:
 -------------------------------------------
 
-1-	The current version of M4JPEG doesn’t include an encryption layer, thus the file we want to hide is not encrypted before the embedding process.
+1-      The current version of M4JPEG doesn’t include an encryption layer, thus the file we want to hide is not encrypted before the embedding process.
         But, the hiding layer is protected by using a key-based permutation generator.
 
 2-	The permutation generator is based on a Matlab built-in pseudo-random generator.
@@ -31,15 +31,6 @@ ABOUT THE CURRENT VERSION - M4JPEG Ver 1.4:
 6-	We use the toolbox of Phil Sallee[2]. Sallee’s toolbox makes easier to access and manipulate the qDCT coefficients of 
         a given JPEG file. The main two functions perform the standard steps of lossless compression, including Huffman Coding and decoding.
 
-
-REFERENCES:
-----------
-
-[1]      KokSheik Wong, Xiaojun Qi, Kiyoshi Tanaka. “A DCT-based Mod4 
-         Steganographic Method”: Signal Processing 87, 1251–1263, 2007.
-
-[2]      Phil Sallee. “Matlab JPEG Toolbox”,Sep 2003.
-         Download link: http://dde.binghamton.edu/download/jpeg_toolbox.zip
 
 
 
