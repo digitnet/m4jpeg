@@ -1,0 +1,244 @@
+<html>
+
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>M4JPEG - Free and Open Source Steganography Software | How M4JPEG Tool Works</title>
+<meta name="keywords" content="information hiding, image steganography tool, image, jpeg, jpg, hider, steganography, steganalysis , phil sallee's matlab jpeg toolbox">
+</head>
+
+<STYLE>A {text-decoration: none;} </STYLE>
+
+<body link="#00FFFF" vlink="#00FFFF" alink="#FFFFFF" background="../images/page-background.png" style="background-attachment: fixed">
+
+<div align="center">
+	<table border="0" width="982" cellspacing="0" cellpadding="0" height="82" id="table1">
+		<tr>
+			<td align="left" width="50%">
+			<img border="0" src="../images/main-logo.png"></td>
+			<td align="center" width="25%">&nbsp;</td>
+			<td align="center" width="25%">&nbsp;</td>
+		</tr>
+	</table>
+	<div align="center">
+		<table border="0" width="982" cellspacing="0" cellpadding="0" id="table2">
+			<tr>
+				<td align="center" height="40" background="../images/top-bar.gif">
+				<font face="Tahoma" size="2" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../about-steganography/information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr>How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</nobr>&nbsp;|&nbsp;<nobr><A HREF="m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="58053" endspan --></font></td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="120" background="../images/top-banner.png">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+		</table>
+		<div align="center">
+			<table border="1" width="982" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#666699" id="table3">
+				<tr>
+					<td align="center">
+					<div align="center">
+						<table border="0" width="100%" cellspacing="0" cellpadding="10" id="table4">
+							<tr>
+								<td align="center" width="17%" valign="top" background="../images/cell-background.png" rowspan="19">
+								&nbsp;<p>
+								<img border="0" src="../images/veracrypt.png" width="120" height="120"></p>
+								<hr>
+								<p>
+								<img border="0" src="../images/torproject.png" width="120" height="79"></p>
+								<p>&nbsp;</p>
+								<p>
+								&nbsp;</td>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								&nbsp;<p><b>
+								<font color="#A80054" face="Tahoma" size="2">
+								How M4JPEG Works</font></b></p>
+								<p>&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="left">
+								<font face="Tahoma" size="2" color="#000066">1- 
+								<a style="color: #3333FF; text-decoration: underline" href="#about m4jpeg">About M4JPEG Tool.</a><br>
+								2- 
+								<a style="color: #3333FF; text-decoration: underline" href="#about version">About the 
+								Current Version 1.40.</a><br>
+								3- <span style="text-decoration: none">
+								<a style="text-decoration: underline" href="#screenshots">
+								<font color="#3333FF">Screenshots of M4JPEG Version 1.40.</font></a></span><br>
+								4- <font color="#3333FF">
+								<span style="text-decoration: none">
+								<a style="text-decoration: underline" href="#embedding diagram">
+								<font color="#3333FF">Basic Diagram of the Embedding 
+								Process.</font></a></span></font><br>
+								5- <span style="text-decoration: none">
+								<a style="text-decoration: underline" href="#extracting diagram">
+								<font color="#3333FF">Basic Diagram of the Extraction 
+								Process.</font></a></span></font></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="left">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								<a name="about m4jpeg"></a>1- About
+								M4JPEG Tool:</font></b></p></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								M4JPEG is a Matlab-based steganography tool that 
+								lets the user processes a jpeg image to be a 
+								container of another file. It is a digital 
+								self-defense tool where the user can easily hide 
+								a private file within a jpeg file. M4JPEG 
+								supports the Mod4 method developed by Wong et 
+								al.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								M4JPEG is made using Matlab. The programming of 
+								M4JPEG required using Phil Sallee's Matlab JPEG 
+								Toolbox for implementing entropy coding and 
+								decoding. But Matlab IDE doesn't need to be 
+								installed on the operating system before running 
+								the tool. Thus, using M4JPEG doesn't require the 
+								user to be familiar with Matlab. It has friendly 
+								graphical user interfaces and is very easy to 
+								use.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								M4JPEG project hopes that users provide us with 
+								any suggestions or any problems they 
+								encounter during their use.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								M4JPEG is a FREEWARE product from digitalsd.net.</font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="left"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								<a name="about version"></a>2- About the Current 
+								Version 1.40:</font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								current version of M4JPEG uses the parameters 
+								M4(1,1,1,1) of the considered method. It doesn’t 
+								encrypt the selected secret file before hiding 
+								it within the Jpeg file. But, it protects the 
+								embedding process by using a pseudo-random 
+								generator to produce a key-based permutation, as 
+								shown in the diagrams below. Adding an 
+								encryption layer to the permutation layer will 
+								provide absolute security. Thus, the M4JPEG 
+								project will consider adding encryption in 
+								addition to steganography in a future version. 
+								Anyway, the user can use an encryption tool 
+								before using the steganography tool.</font></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="left"><b>
+								<font face="Tahoma" size="2" color="#000066">
+								<a style="text-decoration: underline" href="m4jpeg-download-page.htm">
+								<font color="#3333FF">Download Page</font></a></font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="left"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								<a name="screenshots"></a>3- 
+								Screenshots of M4JPEG Version 1.40:</font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<b><font face="Tahoma" size="2" color="#000066">
+								Screenshot of the Main GUI</font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<img border="0" src="../images/main-m4jpeg-gui.png" width="612" height="424"></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<b><font face="Tahoma" size="2" color="#000066">
+								Screenshot of the Hiding GUI - Sender Side</font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<img border="0" src="../images/hiding-m4jpeg-gui.png" width="611" height="423"></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<b><font face="Tahoma" size="2" color="#000066">
+								Screenshot of the Extracting GUI - Receiver Side</font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<img border="0" src="../images/extracting-m4jpeg-gui.png" width="612" height="423"></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="left"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								<a name="embedding diagram"></a>4- 
+								Basic Diagram of the Embedding Process:</font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<img border="0" src="../images/diagram-of-mod4-hiding-process.png" width="750" height="241"></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" bgcolor="#F5F5F5" valign="top">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								<a name="extracting diagram"></a>5- Basic Diagram of the 
+								Extraction Process:</font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<img border="0" src="../images/diagram-of-mod4-extracting-process.png" width="703" height="233"></td>
+							</tr>
+							<tr>
+								<td align="center" width="83%" bgcolor="#F5F5F5" valign="top">
+								<p align="left">
+								<font face="Tahoma" size="2" color="#A80054"><b>
+								Related links:</b></font><font face="Tahoma" size="2" color="#000066"><br>
+								&nbsp;<a style="color: #3333FF; text-decoration: underline" target="_blank" href="phil-sallee-matlab-jpeg-toolbox.htm">Phil 
+								Sallee's MATLAB JPEG Toolbox.</a><br>
+								&nbsp;<a style="color: #3333FF; text-decoration: underline" target="_blank" href="jpeg-compression-format.htm">JPEG 
+								Compression Format.</a></font></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div align="center">
+				<table border="0" width="982" cellspacing="0" cellpadding="0" id="table5">
+					<tr>
+						<td align="center" height="40" bgcolor="#666699">
+						<font face="Tahoma" size="1" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../about-steganography/information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr>How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</nobr>&nbsp;|&nbsp;<nobr><A HREF="m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="58053" endspan --></font></td>
+					</tr>
+					<tr>
+						<td align="center" height="40">
+						<img border="0" src="../images/copyright.gif"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

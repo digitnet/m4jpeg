@@ -1,0 +1,277 @@
+<html>
+
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+							    <meta name="uuid" content="uuidtqULi5q10LLP">
+								<meta charset="utf-8">
+								<meta name="uuid" content="uuidtqULi5q10LLP">
+								<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>M4JPEG - Free and Open Source Steganography Software | About DCT-Based Mod4 Method</title>
+</head>
+
+<STYLE>A {text-decoration: none;} </STYLE>
+
+<body link="#00FFFF" vlink="#00FFFF" alink="#FFFFFF" background="../images/page-background.png" style="background-attachment: fixed">
+
+<div align="center">
+	<table border="0" width="982" cellspacing="0" cellpadding="0" height="82" id="table1">
+		<tr>
+			<td align="left" width="50%">
+			<img border="0" src="../images/main-logo.png"></td>
+			<td align="center" width="25%">&nbsp;</td>
+			<td align="center" width="25%">&nbsp;</td>
+		</tr>
+	</table>
+	<div align="center">
+		<table border="0" width="982" cellspacing="0" cellpadding="0" id="table2">
+			<tr>
+				<td align="center" height="40" background="../images/top-bar.gif">
+				<font face="Tahoma" size="2" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../about-steganography/information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr>About&nbsp;Mod4&nbsp;Method</nobr>&nbsp;|&nbsp;<nobr><A HREF="how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="61186" endspan --></font></td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="120" background="../images/top-banner.png">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+		</table>
+		<div align="center">
+			<table border="1" width="982" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#666699" id="table3">
+				<tr>
+					<td align="center">
+					<div align="center">
+						<table border="0" width="100%" cellspacing="0" cellpadding="10" id="table4">
+							<tr>
+								<td align="center" width="17%" valign="top" bgcolor="#F5F5F5" rowspan="19" background="../images/cell-background.png">
+								&nbsp;<p>
+								<img border="0" src="../images/veracrypt.png" width="120" height="120"></p>
+								<hr>
+								<p>
+								<img border="0" src="../images/torproject.png" width="120" height="79"></td>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<b><font face="Tahoma" color="#A80054" size="2">
+								About DCT-Based Mod4 Method:</font></b><p align="justify">
+								<font color="#000066" face="Tahoma" size="2">We 
+								can make an innocent image a communication 
+								channel by embedding a message within the image. 
+								The image will represent a hidden communication 
+								channel, where no one knows what it contains 
+								except the sender and the intended receiver. 
+								Many image-based steganographic methods have 
+								been invented in the spatial and DCT domains. In 
+								this project, we focus on the Mod4 algorithm as 
+								one of the well-known algorithms in the DCT 
+								domain.</font></p>
+								<p align="justify">
+								<font color="#000066" face="Tahoma" size="2">The 
+								Mod4 algorithm was developed by Wong, Qi, and 
+								Tanaka [1]. Each 8x8 block of qDCT coefficients 
+								is divided into 16 contiguous GQCs, where each 
+								GQC is composed of 2x2 qDCT coefficients. The 
+								GQCs are tested to identify the valid GQCs (vGQC). 
+								The vGQC must meet two conditions considering 
+								the magnitudes of the coefficients and their 
+								number, where these conditions are donated by 
+								the values of &#934;1, &#934;2, &#964;1, and &#964;2 parameters.
+								</font></p>
+								<p align="justify">
+								<font color="#000066" face="Tahoma" size="2">The 
+								Modulo operation of 4 is used as a hash 
+								function. Applying The Modulo operation to a 
+								vGQC will produce 2 Bits. To embed 2 Bits in a 
+								vGQC, the sender needs to modify its 
+								coefficients accordingly, so when the receiver 
+								hashes the modified vGQC, the secret message of 
+								2 Bits will be obtained. The modifications 
+								applied to the vGQC are restricted to the 
+								shortest route modification scheme SRM developed 
+								by Wong et al. [1]. The SRM is based on two 
+								principles; firstly, the modifications applied 
+								to the coefficients should be minimal; secondly, 
+								the modifications should be applied to the 
+								larger coefficient first.</font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								What is the Magic Triangle ?:</font></b></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="center">
+								<img border="0" src="../images/the-magic-triangle.png" width="500" height="246"></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">In the 
+								field of information hiding, there is a visual 
+								requirements model called the Magic Triangle, 
+								proposed by Johnson et al. [2]. Each corner, in 
+								the Magic Triangle, represents a basic 
+								requirement; undetectability, robustness to 
+								attacks, and the insertion capacity. This visual 
+								model is convenient for presenting the balance 
+								between the three desirable requirements. It 
+								shows that these requirements cannot be made 
+								perfect at the same time; when we get closer to 
+								a corner, we move away from another corner. As a 
+								clarification, there is a trade-off between the 
+								insertion capacity and the robustness against 
+								attacks. It is not possible to have high 
+								insertion capacity and high robustness to signal 
+								modifications at the same time. In other words, 
+								the presence of large embedded data makes the 
+								carrier medium vulnerable to signal modification 
+								attacks. </font> </p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Steganography pays much more attention to 
+								insertion capacity rather than robustness 
+								against attacks, while watermarking has a great 
+								interest in robustness against signal 
+								modifications since it aims to protect the 
+								ownership of a medium. On the other side, 
+								steganographic algorithms should not cause any 
+								perceptible distortion and have to be 
+								statistically invisible, so it should be very 
+								difficult to prove the presence of a hidden 
+								message. In the steganography, we aim to hide a 
+								large message using an undetectable way, but we 
+								cannot realize a perfect undetectability and a 
+								large capacity at the same time.</font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<font face="Tahoma" size="2">
+								<span style="color: #A80054; font-weight: 700; margin-top: 0pt; margin-bottom: 0pt; background:" data-preserver-spaces="true">
+								Comparing Mod4 with F5 from The perspective of 
+								the Magic Triangle:</span></font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="center">
+								<img border="0" src="../images/mod4-and-f5-in-the-magic-triangle.png" width="475" height="269"></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The determination of the approximate locations 
+								of Mod4 and F5 algorithms is the result of a 
+								comparative study completed in chapter 4 of the 
+								Ms thesis of Al Chamaa [3]. The resulting Magic 
+								Triangle shows how Mod4 stands compared to F5. 
+								In other words, it shows how each algorithm 
+								satisfies each requirement compared to the other 
+								one.</font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">In the following, we will show some comparative 
+								results taken from the MS thesis we mentioned 
+								above [3]. These results concern the insertion 
+								capacity, stego image quality, and statistical 
+								distribution:</font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								The Insertion Capacity of Mod4 Compared to F5:</font></b></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p>
+								<font face="Tahoma" size="2" color="#000066">The following graph shows the bpc values for 60 
+								jpeg images.</font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="center">
+								<img border="0" src="../images/capacity-of-mod4-and-f5.png" width="750" height="535"></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								The Stego Image Quality of Mod4 Compared to F5 - 
+								(MSE, PSNR):</font></b></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<font face="Tahoma" size="2" color="#000066">The following table presents the average values 
+								for 60 jpeg images.</font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="center">
+								<img border="0" src="../images/mse-psnr-of-mod4-and-f5.png" width="321" height="70"></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								The Resulting Histogram of Mod4 Compared to F5:</font></b></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The following graph shows the resulting 
+								histograms. The inserted message corresponds to 
+								the maximum capacity provided by Mod4.</font></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<p align="center">
+								<img border="0" src="../images/histogram-of-mod4-and-f5.png" width="750" height="536"></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<b><font face="Tahoma" size="2" color="#A80054">References:</font></b></td>
+							</tr>
+							<tr>
+								<td align="left" width="83%" valign="top" bgcolor="#F5F5F5">
+								<font face="Tahoma" size="2" color="#000066">
+								<span style="text-decoration: none">
+								[1]:&nbsp;&nbsp;
+								<a style="color: #3333FF; text-decoration: underline" href="../downloads/pdf/a-dct-based-mod4-steganographic-method.pdf">&quot;A DCT-based Mod4 Steganographic 
+								Method&quot;&nbsp; by Wong et al., 2007.</a></span></font><br>
+								<font face="Tahoma" size="2" color="#000066">
+								[2]:&nbsp;&nbsp; &quot;Information Hiding: Steganography 
+								and Watermarking Attacks and Countermeasures&quot;. 
+								by Johnson et al., 2001.<br>
+								[3]: &nbsp;
+								<a style="color: #3333FF; text-decoration: underline" href="https://www.grin.com/document/382491">
+								&quot;Cryptography and Steganography in Digital 
+								Images&quot; by Al Chamaa, 2009.</a></font></td>
+							</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div align="center">
+				<table border="0" width="982" cellspacing="0" cellpadding="0" id="table5">
+					<tr>
+						<td align="center" height="40" bgcolor="#666699">
+						<font face="Tahoma" size="1" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../about-steganography/information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr>About&nbsp;Mod4&nbsp;Method</nobr>&nbsp;|&nbsp;<nobr><A HREF="how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="61186" endspan --></font></td>
+					</tr>
+					<tr>
+						<td align="center" height="40">
+						<img border="0" src="../images/copyright.gif"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

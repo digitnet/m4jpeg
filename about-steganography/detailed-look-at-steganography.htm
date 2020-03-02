@@ -1,0 +1,540 @@
+<html>
+
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>M4JPEG - Free and Open Source Steganography Software | A detailed look at Steganography</title>
+<meta name="description" content="provides a detailed look at steganography">
+<meta name="keywords" content="image steganography, audio steganograph, text steganography, hypertext steganography">
+</head>
+
+<STYLE>A {text-decoration: none;} </STYLE>
+
+<body link="#00FFFF" vlink="#00FFFF" alink="#FFFFFF" background="../images/page-background.png" style="background-attachment: fixed">
+
+<div align="center">
+	<table border="0" width="982" cellspacing="0" cellpadding="0" height="82" id="table1">
+		<tr>
+			<td align="left" width="50%">
+			<img border="0" src="../images/main-logo.png"></td>
+			<td align="center" width="25%">&nbsp;</td>
+			<td align="center" width="25%">&nbsp;</td>
+		</tr>
+	</table>
+	<div align="center">
+		<table border="0" width="982" cellspacing="0" cellpadding="0" id="table2">
+			<tr>
+				<td align="center" height="40" background="../images/top-bar.gif">
+				<font face="Tahoma" size="2" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="5309" endspan --></font></td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="120" background="../images/top-banner.png">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+		</table>
+		<div align="center">
+			<table border="1" width="982" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#666699" id="table3">
+				<tr>
+					<td align="center">
+					<div align="center">
+						<table border="0" width="100%" cellspacing="0" cellpadding="10" id="table4">
+							<tr>
+								<td align="center" width="23%" valign="top" background="../images/cell-background.png">
+								<p align="left">
+								<font face="Tahoma" size="2" color="#3333FF">
+								<a style="color: #3333FF; text-decoration: underline" href="information-hiding-and-its-applications.htm">Information Hiding</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="information-hiding-and-its-applications.htm">and its Applications</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="introduction-to-steganography-and-watermarking.htm">Steganography and Watermarking</a><br>
+								</font>
+								<font face="Tahoma" size="2" color="#660033">
+								A detailed look at Steganography<br>
+								&nbsp;&nbsp; &#9702; Text Steganography<br>
+								&nbsp;&nbsp; &#9702; Hypertext Steganography<br>
+								&nbsp;&nbsp; &#9702; Audio Steganography<br>
+								&nbsp;&nbsp; &#9702; Image Steganography<br>
+								&nbsp;&nbsp; &#9702; Steganography in Open System</font><font face="Tahoma" size="2" color="#3333FF"><br>
+								<a style="color: #3333FF; text-decoration: underline" href="image-steganography-techniques.htm">Image Steganography Techniques</a><br>
+								&nbsp;&nbsp; &#9702; Spatial Domain LSB Insertion<br>
+								&nbsp;&nbsp; &#9702; Masking and Filtering<br>
+								&nbsp;&nbsp; &#9702; 
+								<a style="color: #3333FF; text-decoration: underline" href="dct-based-steganography.htm">DCT-based Steganography</a><br>
+								&nbsp;&nbsp; &#9702; 
+								<a style="color: #3333FF; text-decoration: underline" href="wavelet-based-steganography.htm">Wavelet-based Steganography</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="how-to-detect-steganography.htm">How to Detect Steganography</a><br>
+								&nbsp;&nbsp; &#9702; Blind Detection<br>
+								&nbsp;&nbsp; &#9702; Analytical Detection</font><hr>
+								<p>
+								<a href="reading-room-papers-articles-theses.htm">
+								<img border="0" src="../images/reading-room-left.gif"></a></p>
+								<hr>
+								<p>
+								<a href="https://www.grin.com/en/?partner_id=1791783" target="_blank">
+								<font color="#3333FF">GRIN Publishing</font></a></p>
+								<p><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank"><img src="https://cdn.grin.com/images/grin/grin-logo-en.png" style="border: none;" /></a></p>
+								<div style="display: block; width: 200px; height: 100px; background: url('https://cdn.grin.com/images/widgets/search/grin-search-widget-bg-en.gif') no-repeat; position: relative;"><form action="https://www.grin.com/search" method="GET" target="_blank" style="border: none; padding: 0px; margin: 0px;"><input type="hidden" name="partner_id" value="1791783"/><input type="hidden" name="op" value="1"/><input type="text" name="searchstring" style="position: absolute; left: 20px; top: 32px; width: 140px; border: none; box-shadow: none; background: transparent;" /><input type="submit" value="" style="position: absolute; left: 170px; top: 37px; width: 14px; height: 14px; background: transparent url('https://cdn.grin.com/images/widgets/search/search-button.gif') no-repeat top left; border: none; box-shadow: none "/></form><a href="https://www.grin.com/?partner_id=1791783" style="display: block; position: absolute; top: 65px; left: 55px; width: 140px; height: 34px;"> </a></div>
+								<hr>
+								<p>
+								<a href="http://m4jpeg.digitalsd.net/">
+								<img border="0" src="../images/side-banner.png" width="200" height="350"></a></p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p><font face="Tahoma" size="2" color="#000066">
+								<br>
+&nbsp;</font></td>
+								<td align="center" width="77%" bgcolor="#F5F5F5" valign="top">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								<br>
+								A detailed look at Steganography</font></b><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								<br>
+								Lets look at what a theoretically perfect secret 
+								communication (Steganography) would consist of. 
+								To illustrate this concept, we will use three 
+								fictitious characters named Amy, Bret and 
+								Crystal. Amy wants to send a secret message (M) 
+								to Bret using a cover (C) which can be sent to 
+								Bret without raising suspicion. Amy then changes 
+								the cover message (C) to a stego-object (S) by 
+								embedding the secret message (M) into the cover 
+								message (C) by using a stego-key (K). Amy should 
+								then be able to send the stego object (S) to 
+								Bret without being detected by Crystal. Bret 
+								will then be able to read the secret message (M) 
+								because he knows the stego-key (K) used to embed 
+								it into the cover message (C).</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">In 
+								a perfect system, a normal cover should not be 
+								distinguishable from a stego-object, neither by 
+								a human nor by a computer looking for 
+								statistical patterns. In practice, however, this 
+								is not always the case. In order to embed secret 
+								data into a cover message, the cover must 
+								contain a sufficient amount of redundant data or 
+								noise. This is because the embedding process 
+								Steganography replaces this redundant data with 
+								the secret message. This limits the types of 
+								data that we can use with Steganography.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">In practice, there are basically three types of 
+								steganographic protocols used. They are Pure 
+								Steganography, Secret Key Steganography and 
+								Public Key Steganography. Pure Steganography is 
+								defined as a steganographic system that does not 
+								require the exchange of a cipher such as a 
+								stego-key. This method of Steganography is the 
+								least secure means by which to communicate 
+								secretly because the sender and receiver can 
+								rely only upon the presumption that no other 
+								parties are aware of this secret message.
+								Secret Key Steganography is defined as a 
+								steganographic system that requires the exchange 
+								of a secret key (stego-key) prior to 
+								communication. Secret Key Steganography takes a 
+								cover message and embeds the secret message 
+								inside of it by using a secret key (stego-key). 
+								Only the parties who know the secret key can 
+								reverse the process and read the secret message. </font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Public Key Steganography takes the concepts from 
+								Public Key Cryptography as explained below. 
+								Public Key Steganography is defined as a 
+								steganographic system that uses a public key and 
+								a private key to secure the communication 
+								between the parties wanting to communicate 
+								secretly. The sender will use the public key 
+								during the encoding process and only the private 
+								key, which has a direct mathematical 
+								relationship with the public key, can decipher 
+								the secret message. Public Key Steganography 
+								provides a more robust way of implementing a 
+								steganographic system because it can utilize a 
+								much more robust and researched technology in 
+								Public Key Cryptography.</font></p>
+								<p align="left"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								Text-based steganography:</font></b></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Encoding secret messages in text can be a very 
+								challenging task. This is because text files 
+								have a very small amount of redundant data to 
+								replace with a secret message. Another drawback 
+								is the ease of which text based Steganography 
+								can be altered by an unwanted parties by just 
+								changing the text itself or reformatting the 
+								text to some other form (from .TXT to .PDF, 
+								etc.). There are numerous methods by which to 
+								accomplish text based Steganography. Below a few 
+								of the more popular encoding methods are 
+								introduced.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Line-shift encoding involves actually shifting 
+								each line of text vertically up or down by as 
+								little as 3 centimeters. Depending on whether 
+								the line was up or down from the stationary line 
+								would equate to a value that would or could be 
+								encoded into a secret message.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Word-shift encoding works in much the same way 
+								that line-shift encoding works; only we use the 
+								horizontal spaces between words to equate a 
+								value for the hidden message. This method of 
+								encoding is less visible than line-shift 
+								encoding but requires that the text format 
+								support variable spacing.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Feature specific encoding involves encoding 
+								secret messages into formatted text by changing 
+								certain text attributes such as 
+								vertical/horizontal length of letters such as b, 
+								d, T, etc. All three of these text-based 
+								encoding methods require either the original 
+								file or the knowledge of the original files 
+								formatting to be able to decode the secret 
+								message.</font></p>
+								<p align="justify"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								hyper text-based steganography:</font></b></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Steganography with hypertext can also be done a 
+								variety of different ways, like the text files 
+								the hyper text files have a small amount of 
+								redundant data to replace with a secret message 
+								so encoding secret messages in hyper text can be 
+								a very challenging task so it has the same 
+								drawbacks of the text-based steganography.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								There are numerous methods by which to 
+								accomplish hyper text-based Steganography, we 
+								have the same methods that have been mentioned 
+								in text-based steganography, line-shift encoding 
+								and word-shift encoding. In addition hiding data 
+								could be performed by use of Hypertext comment 
+								notations that can take place within the 
+								hypertext file.
+								In other hand we can hide secret messages in the 
+								web visible page by a special Arrangement of the 
+								contents on a given web page or by the presence 
+								or absence of content elements like images and 
+								phrases.</font></p>
+								<p align="justify"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								Audio-based Steganography:</font></b></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Encoding secret messages in audio is the most 
+								challenging technique to use when dealing with 
+								Steganography. This is because the human 
+								auditory system (HAS) has such a dynamic range 
+								that it can listen over. To put this in 
+								perspective, the (HAS) perceives over a range of 
+								power greater than one million to one and a 
+								range of frequencies greater than one thousand 
+								to one making it extremely hard to add or remove 
+								data from the original data structure. The only 
+								weakness in the (HAS) comes at trying to 
+								differentiate sounds (loud sounds drown out 
+								quiet sounds) and this is what must be exploited 
+								to encode secret messages in audio without being 
+								detected.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								There are two concepts to consider before 
+								choosing an encoding technique for audio. They 
+								are the digital format of the audio and the 
+								transmission medium of the audio.
+								There are three main digital audio formats 
+								typically in use. They are Sample Quantization, 
+								Temporal Sampling Rate and Perceptual Sampling.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Sample Quantization which is a 16-bit linear 
+								sampling architecture used by popular audio 
+								formats such as (WAV and AIFF). Temporal 
+								Sampling Rate uses selectable frequencies (in 
+								the KHz) to sample the audio. Generally, the 
+								higher the sampling rate is, the higher the 
+								usable data space gets. The last audio format is 
+								Perceptual Sampling. This format changes the 
+								statistics of the audio drastically by encoding 
+								only the parts the listener perceives, thus 
+								maintaining the sound but changing the signal. 
+								This format is used by the most popular digital 
+								audio on the Internet today in ISO MPEG (MP3).</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Transmission medium (path the audio takes from 
+								sender to receiver) must also be considered when 
+								encoding secret messages in audio. There are 
+								four possible transmission mediums:<br>
+								1) Digital end to end - from machine to machine 
+								without modification.<br>
+								2) Increased/decreased resampling - the sample 
+								rate is modified but remains digital.<br>
+								3) Analog and resampled - signal is changed to 
+								analog and resampled at a different rate. <br>
+								4) Over the air - signal is transmitted into 
+								radio frequencies and resampled from a 
+								microphone.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								We will now look at three of the more popular 
+								encoding methods for hiding data inside of 
+								audio. They are low-bit encoding, phase-coding 
+								and spread spectrum:</font></p>
+								<p align="justify">
+								<font face="Times New Roman" size="2" color="#000066">
+								• </font>
+								<font face="Tahoma" size="2" color="#000066">
+								Low-bit encoding embeds secret data into the 
+								least significant bit (LSB) of the audio file. 
+								This method is easy to incorporate but is very 
+								susceptible to data loss due to channel noise 
+								and resampling.</font></p>
+								<p align="justify">
+								<font face="Times New Roman" size="2" color="#000066">
+								• </font>
+								<font face="Tahoma" size="2" color="#000066">
+								Phase coding substitutes the phase of an initial 
+								audio segment with a reference phase that 
+								represents the hidden data. This can be thought 
+								of, as sort of an encryption for the audio 
+								signal by using what is known as Discrete 
+								Fourier Transform (DFT), which is nothing more 
+								than a transformation algorithm for the audio 
+								signal.</font></p>
+								<p align="justify">
+								<font face="Times New Roman" size="2" color="#000066">
+								• </font>
+								<font face="Tahoma" size="2" color="#000066">
+								Spread spectrum encodes the audio over almost 
+								the entire frequency spectrum. It then transmits 
+								the audio over different frequencies which will 
+								vary depending on what spread spectrum method is 
+								used. Direct Sequence Spread Spectrum (DSSS) is 
+								one such method that spreads the signal by 
+								multiplying the source signal by some pseudo 
+								random sequence known as a (CHIP). The sampling 
+								rate is then used as the chip rate for the audio 
+								signal communication. Spread spectrum encoding 
+								techniques are the most secure means by which to 
+								send hidden messages in audio, but it can 
+								introduce random noise to the audio thus 
+								creating the chance of data loss.</font></p>
+								<p align="justify"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								Image-based Steganography:</font></b></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Coding secret messages in digital images is by 
+								far the most widely used of all methods in the 
+								digital world of today? This is because it can 
+								take advantage of the limited power of the human 
+								visual system (HVS). Almost any plain text, 
+								cipher text, image and any other media that can 
+								be encoded into a bit stream can be hidden in a 
+								digital image. With the continued growth of 
+								strong graphics power in computers and the 
+								research being put into image based 
+								Steganography, this field will continue to grow 
+								at a very rapid pace.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Before diving into coding techniques for digital 
+								images, a brief explanation of digital image 
+								architecture and digital image compression 
+								techniques should be explained.
+								To a computer, an image is an array of numbers 
+								that represent light intensities at various 
+								points, or pixels. These pixels make up the 
+								images raster data. When dealing with digital 
+								images for use with Steganography, 8-bit and 
+								24-bit per pixel image files are typical. Both 
+								have advantages and disadvantages, as we will 
+								explain below. 8-bit images are a great format 
+								to use because of their relatively small size. 
+								The drawback is that only 256 possible colors 
+								can be used which can be a potential problem 
+								during encoding. Usually a gray scale color 
+								palette is used when dealing with 8-bit images 
+								such as (GIF) because its gradual change in 
+								color will be harder to detect after the image 
+								has been encoded with the secret message. 24-bit 
+								images offer much more flexibility when used for 
+								Steganography. The large numbers of colors (over 
+								16 million) that can be used go well beyond the 
+								human visual system (HVS), which makes it very 
+								hard to detect once a secret message, has been 
+								encoded. The other benefit is that a much larger 
+								amount of hidden data can be encoded into a 
+								24-bit digital image as opposed to an 8-bit 
+								digital image. The one major drawback to 24-bit 
+								digital images is their large size (usually in 
+								MB) makes them more suspect than the much 
+								smaller 8-bit digital images (usually in KB) 
+								when sent over an open system such as the 
+								Internet.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Digital image compression is a good solution to 
+								large digital images such as the 24-bit images 
+								mentioned earlier. There are two types of 
+								compression used in digital images, lossy and 
+								lossless. Lossy compression such as (JPEG) 
+								greatly reduces the size of a digital image by 
+								removing excess image data and calculating a 
+								close approximation of the original image. Lossy 
+								compression is usually used with 24-bit digital 
+								images to reduce its size, but it does carry one 
+								major drawback. Lossy compression techniques 
+								increase the possibility that the uncompressed 
+								secret message will lose parts of its contents 
+								because of the fact that lossy compression 
+								removes what it sees as excess image data. 
+								Lossless compression techniques, as the name 
+								suggests, keeps the original digital image in 
+								tact without the chance of loss. It is for this 
+								reason that it is the compression technique of 
+								choice for steganographic uses. Examples of 
+								lossless compression techniques are (GIF and 
+								BMP). The only drawback to lossless image 
+								compression is that it doesn't do a very good 
+								job at compressing the size of the image data.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								We will now discuss a couple of the more popular 
+								digital image encoding techniques used today. 
+								They are least significant bit (LSB) encoding 
+								and masking and filtering techniques:</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Least significant bit (LSB) encoding is by far 
+								the most popular of the coding techniques used 
+								for digital images. By using the LSB of each 
+								byte (8 bits) in an image for a secret message, 
+								you can store 3 bits of data in each pixel for 
+								24-bit images and 1 bit in each pixel for 8-bit 
+								images. As you can see, much more information 
+								can be stored in a 24-bit image file. Depending 
+								on the color palette used for the cover image 
+								(i.e., all gray), it is possible to take 2 LSB's 
+								from one byte without the human visual system (HVS) 
+								being able to tell the difference. The only 
+								problem with this technique is that it is very 
+								vulnerable to attacks such as image changes and 
+								formatting (changing from .GIF to .JPEG).</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Masking and filtering techniques for digital 
+								image encoding such as Digital Watermarking 
+								(integrating a companies logo on there web 
+								content) are more popular with lossy compression 
+								techniques such as (JPEG). This technique 
+								actually extends an image data by masking the 
+								secret data over the original data as opposed to 
+								hiding information inside of the data. Some 
+								experts argue that this is definitely a form of 
+								Information Hiding, but not technically 
+								Steganography. The beauty of Masking and 
+								filtering techniques are that they are immune to 
+								image manipulation which makes there possible 
+								uses very robust.<br>
+								<br>
+								There are many other techniques that use complex 
+								algorithms, image transformation techniques and 
+								image encryption techniques are still relatively 
+								new, but show promise to be more secure and 
+								robust ways to use digital images in 
+								Steganography.</font></p>
+								<p align="justify"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								Steganography in an open system:</font></b></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">In 
+								this section we will look at some of the 
+								possible applications for steganography. The 
+								three most popular and researched uses for 
+								steganography in an open systems environment are 
+								covert channels, embedded data and digital 
+								watermarking.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Covert channels in TCP/IP involve masking 
+								identification information in the TCP/IP headers 
+								to hide the true identity of one or more 
+								systems. This can be very useful for any secure 
+								communications needs over open systems such as 
+								the Internet when absolute secrecy is needed for 
+								an entire communication process and not just one 
+								document as mentioned next.
+								Using containers (cover messages) to embed 
+								secret messages into is by far the most popular 
+								use of Steganography today. This method of 
+								Steganography is very useful when a party must 
+								send a top secret, private or highly sensitive 
+								document over an open systems environment such 
+								as the Internet. By embedding the hidden data 
+								into the cover message and sending it, you can 
+								gain a sense of security by the fact that no one 
+								knows you have sent more than a harmless message 
+								other than the intended recipients.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Although not a pure steganographic technique, 
+								digital watermarking is very common in Today’s 
+								world and does use Steganographic techniques to 
+								embed information into documents. Digital 
+								watermarking is usually used for copy write 
+								reasons by companies or entities that wish to 
+								protect their property by either embedding their 
+								trademark into their property or by concealing 
+								serial numbers/license information in software, 
+								etc. Digital watermarking is very important in 
+								the detection and prosecution of software 
+								pirates and digital thieves.</font></p><hr>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#660033">
+								Reference:<br>
+								• A Detailed Look at Steganographic Techniques 
+								and their Use in an Open-Systems Environment, by 
+								Bret Dunbar, January 2002.</font></p>
+								</td>
+							</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div align="center">
+				<table border="0" width="982" cellspacing="0" cellpadding="0" id="table5">
+					<tr>
+						<td align="center" height="40" bgcolor="#666699">
+						<font face="Tahoma" size="1" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="5309" endspan --></font></td>
+					</tr>
+					<tr>
+						<td align="center" height="40">
+						<img border="0" src="../images/copyright.gif"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

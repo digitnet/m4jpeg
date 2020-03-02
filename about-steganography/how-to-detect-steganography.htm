@@ -1,0 +1,367 @@
+<html>
+
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>M4JPEG - Free and Open Source Steganography Software | How to Detect Steganography</title>
+<meta name="description" content="provides basic concepts about how to detect steganography">
+<meta name="keywords" content="steganalysis, detecting steganography, blind detection, analytical detection">
+</head>
+
+<STYLE>A {text-decoration: none;} </STYLE>
+
+<body link="#00FFFF" vlink="#00FFFF" alink="#FFFFFF" background="../images/page-background.png" style="background-attachment: fixed">
+
+<div align="center">
+	<table border="0" width="982" cellspacing="0" cellpadding="0" height="82" id="table1">
+		<tr>
+			<td align="left" width="50%">
+			<img border="0" src="../images/main-logo.png"></td>
+			<td align="center" width="25%">&nbsp;</td>
+			<td align="center" width="25%">&nbsp;</td>
+		</tr>
+	</table>
+	<div align="center">
+		<table border="0" width="982" cellspacing="0" cellpadding="0" id="table2">
+			<tr>
+				<td align="center" height="40" background="../images/top-bar.gif">
+				<font face="Tahoma" size="2" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="5309" endspan --></font></td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="120" background="../images/top-banner.png">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+		</table>
+		<div align="center">
+			<table border="1" width="982" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#666699" id="table3">
+				<tr>
+					<td align="center">
+					<div align="center">
+						<table border="0" width="100%" cellspacing="0" cellpadding="10" id="table4">
+							<tr>
+								<td align="center" width="23%" valign="top" background="../images/cell-background.png">
+								<p align="left">
+								<font face="Tahoma" size="2" color="#3333FF">
+								<a style="color: #3333FF; text-decoration: underline" href="information-hiding-and-its-applications.htm">Information Hiding</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="information-hiding-and-its-applications.htm">and its Applications</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="introduction-to-steganography-and-watermarking.htm">Steganography and Watermarking</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="detailed-look-at-steganography.htm">A detailed look at Steganography</a><br>
+&nbsp;&nbsp; &#9702; Text Steganography<br>
+&nbsp;&nbsp; &#9702; Hypertext Steganography<br>
+&nbsp;&nbsp; &#9702; Audio Steganography<br>
+&nbsp;&nbsp; &#9702; Image Steganography<br>
+&nbsp;&nbsp; &#9702; Steganography in Open System<br>
+								<a style="color: #3333FF; text-decoration: underline" href="image-steganography-techniques.htm">Image Steganography Techniques</a><br>
+&nbsp;&nbsp; &#9702; Spatial Domain LSB Insertion<br>
+&nbsp;&nbsp; &#9702; Masking and Filtering<br>
+&nbsp;&nbsp; &#9702; <a style="color: #3333FF; text-decoration: underline" href="dct-based-steganography.htm">DCT-based Steganography</a><br>
+&nbsp;&nbsp; &#9702; <a style="color: #3333FF; text-decoration: underline" href="wavelet-based-steganography.htm">Wavelet-based Steganography</a><br>
+								</font>
+								<font face="Tahoma" size="2" color="#660033">
+								How to Detect Steganography<br>
+&nbsp;&nbsp; &#9702; Blind Detection<br>
+&nbsp;&nbsp; &#9702; Analytical Detection</font><hr>
+								<p>
+								<a href="reading-room-papers-articles-theses.htm">
+								<img border="0" src="../images/reading-room-left.gif"></a></p>
+								<hr>
+								<p><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank">
+								<font color="#3333FF">GRIN Publishing</font></a></p>
+								<p><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank"><img src="https://cdn.grin.com/images/grin/grin-logo-en.png" style="border: none;" /></a></p>
+								<div style="display: block; width: 200px; height: 100px; background: url('https://cdn.grin.com/images/widgets/search/grin-search-widget-bg-en.gif') no-repeat; position: relative;"><form action="https://www.grin.com/search" method="GET" target="_blank" style="border: none; padding: 0px; margin: 0px;"><input type="hidden" name="partner_id" value="1791783"/><input type="hidden" name="op" value="1"/><input type="text" name="searchstring" style="position: absolute; left: 20px; top: 32px; width: 140px; border: none; box-shadow: none; background: transparent;" /><input type="submit" value="" style="position: absolute; left: 170px; top: 37px; width: 14px; height: 14px; background: transparent url('https://cdn.grin.com/images/widgets/search/search-button.gif') no-repeat top left; border: none; box-shadow: none "/></form><a href="https://www.grin.com/?partner_id=1791783" style="display: block; position: absolute; top: 65px; left: 55px; width: 140px; height: 34px;"> </a></div>
+								<hr>
+								<p>
+								<a href="http://m4jpeg.digitalsd.net/">
+								<img border="0" src="../images/side-banner.png" width="200" height="350"></a></p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p><font face="Tahoma" size="2" color="#000066">
+								<br>
+&nbsp;</font></p>
+								<p align="left">
+								<font face="Tahoma" size="2" color="#3333FF">
+								<br>
+&nbsp;</font></td>
+								<td align="center" width="77%" bgcolor="#F5F5F5" valign="top">
+								<p><font face="Tahoma" size="2" color="#A80054">
+								<b><br>
+								Steganalysis : How to Detect Steganography</b></font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								<br>
+								Steganalysis is the discovery of the existence 
+								of hidden information; therefore, like 
+								cryptography and cryptanalysis, the goal of 
+								steganalysis is to discover hidden information 
+								and to break the security of its carriers. In 
+								order to know how the steganalysts work, and 
+								what techniques and methods they use, we suggest 
+								reading what has been published by the Steganography Analysis and Research Center (<b>SARC</b>) 
+								:</font><p align="left">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								&quot;Blind&quot; Steganography Detection:</font></b><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								blind detection approach to steganalysis has 
+								been around for a number of years. Blind 
+								detection attempts to determine if a message may 
+								be hidden in a file without any prior knowledge 
+								of the specific steganography application used 
+								to hide the information. Several techniques may 
+								be employed to inspect suspect files including 
+								various visual, structural, and statistical 
+								methods.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Visual analysis methods attempt to detect the 
+								presence of steganography through visual 
+								inspection, either with the naked eye or with 
+								the assistance of automated processes. Visual 
+								inspection with the naked eye can succeed when 
+								steganography is inserted in relatively smooth 
+								areas with nearly equal pixel values. Automated 
+								computer processes can, for example, decompose 
+								an image into its individual bit-planes. A 
+								bit-plane consists of a single bit of memory for 
+								each pixel in an image, and is a typical storage 
+								place for information hidden by steganography 
+								applications. Any unusual appearance in the 
+								display of the least significant bit-plane would 
+								be expected to indicate the existence of 
+								steganography.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Structural analysis methods attempt to reveal 
+								alterations in the format of the data file. For 
+								example, a steganography application may append 
+								hidden information past an image's end-of-file 
+								marker. An image that has been modified using 
+								this appending technique is interpreted by the 
+								operating system just as if it were the original 
+								carrier file. The two files are visually and 
+								digitally identical, because the image's data 
+								bits have not been altered. The hidden 
+								information that is embedded past the 
+								end-of-file marker is simply ignored by the 
+								operating system. Several automated methods for 
+								conducting structural analysis have been 
+								developed in addition to the manual process of 
+								investigating images with a hex editor.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Statistical analysis methods attempt to detect 
+								tiny alterations in a file's statistical 
+								behavior caused by steganographic embedding. 
+								Statistical analysis of files can be difficult 
+								and time consuming, since there are a variety of 
+								approaches to embedding—each modifying the 
+								carrier file in a different way. Therefore, 
+								unified techniques for detecting steganography 
+								using this method are difficult to find. 
+								Determining statistics such as means, variances, 
+								and chi-square tests can measure the amount of 
+								redundant information and/or deviation from the 
+								expected file characteristic. Current research 
+								in blind detection steganalysis is focused on 
+								these statistical methods.</font><p align="justify">
+								<br>
+								<font face="Tahoma" size="2" color="#000066"><u>
+								Complications of Blind Detection </u><br>
+								<br>
+								In practice, even if the blind detection 
+								technique detects anomalies in suspect files, it 
+								is not very likely that the hidden information 
+								can successfully be extracted. It is often not 
+								possible to identify the particular 
+								steganography application used to embed hidden 
+								information within the suspect file using 
+								current blind detection algorithms. The suspect 
+								file may have characteristics similar to an 
+								anomaly that will trigger a false positive 
+								result. Even if it is possible to extract the 
+								hidden information, which is highly unlikely 
+								using only a blind detection approach, the 
+								hidden information may have been encrypted prior 
+								to being embedded in the carrier file.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								following four complications are possible when 
+								implementing blind detection techniques for 
+								steganalysis: <br>
+&nbsp;&nbsp;&nbsp; •The suspect file may or may not have any information hidden 
+								in it in the first place.<br>
+&nbsp;&nbsp;&nbsp; •The hidden message may have been encrypted before being 
+								hidden in the carrier file.<br>
+&nbsp;&nbsp;&nbsp; •Some suspect files may have had noise or irrelevant data 
+								encoded in them which reduces the stealth aspect<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (i.e., makes it easier to detect use of 
+								steganography) but makes analysis very 
+								time-consuming.<br>
+&nbsp;&nbsp;&nbsp; •Unless the hidden information can be found, completely 
+								recovered, and decrypted (if encrypted), it is 
+								often not possible to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; be sure whether the suspect carrier file 
+								contained a hidden message in the first 
+								place-all the user end up with is a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; probability that the suspect carrier file may 
+								have something hidden within it.</font><p align="justify">&nbsp;<hr width="75%">
+								<p align="left"><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								&quot;Analytical&quot; Steganography Detection:</font></b><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								analytical approach to steganalysis has been 
+								developed by the Steganography Analysis and 
+								Research Center as a byproduct of extensive 
+								research of steganography applications and the 
+								techniques they employ to embed hidden 
+								information within files. The premise of this 
+								approach is to first determine if any residual 
+								file and/or Microsoft Windows Registry artifacts 
+								from a particular steganography application 
+								exist on the suspect media.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">&nbsp; 
+								•&nbsp; If residual artifacts exist, then the 
+								application was probably installed.<br>
+&nbsp; •&nbsp; If the application was installed, then it was probably used.<br>
+&nbsp; •&nbsp; If the application was used, then something was probably hidden 
+								using it.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								analytical approach attempts to determine if 
+								there is any evidence that a steganography 
+								application ever existed on the suspect media. 
+								Searching for files and registry entries that 
+								have been identified by the SARC as belonging to 
+								a steganography application will identify these 
+								residual artifacts. The goal is to determine 
+								what application was used, what type(s) of 
+								carrier files it may have been used on, and 
+								finding what was hidden by that particular 
+								application.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								analytical approach to steganalysis is intended 
+								to be an extension of traditional computer 
+								forensics practices. For example, all deleted 
+								files and alternate data streams should be 
+								recovered using traditional forensics utilities 
+								prior to conducting steganalysis.<br>
+								<br>
+								<u>The Steganography Application Library</u></font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								SARC maintains a library of steganography, 
+								watermarking, and other data-hiding applications 
+								by routinely searching the Internet for 
+								freeware, shareware, and licensed applications. 
+								When found, an application is downloaded and 
+								catalogued with the application name, date and 
+								time of download, and location it was found on 
+								the Internet. Each application is installed, 
+								tested, and examined before being added to the 
+								library.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								Internet is dynamic and ever changing—a 
+								steganography application that appears on a 
+								certain website may not be available when a 
+								computer forensic examiner needs to access it at 
+								a later date. Thus, the SARC also maintains a 
+								physical repository containing archive copies of 
+								all applications on CD-ROM. This repository may 
+								be consulted by computer forensic examiner on a 
+								fee-for-service basis if artifacts of an 
+								application are discovered during an examination 
+								and the original application is no longer 
+								available.</font><p align="justify"><u>
+								<font face="Tahoma" size="2" color="#000066">
+								Process for Analytical Steganalysis</font></u><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">To 
+								determine if residual file artifacts of 
+								steganography applications exist on the suspect 
+								media, the SARC has developed the Steganography 
+								Application Fingerprint Database (SAFDB). The 
+								SAFDB contains file profiles associated with 
+								hundreds of steganography, watermarking, and 
+								other data-hiding applications. These file 
+								profiles contain identifying information such as 
+								filename, file size, associated application 
+								name, and several unique hash values: CRC-32, 
+								MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-256, 
+								and SHA-512. These hash values may be used to 
+								determine the presence of artifacts of 
+								steganography applications on the media being 
+								examined.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								first step in the analytical approach is to hash 
+								all files on the suspect media. Next, compare 
+								the generated hash values with those in the 
+								SAFDB. A match represents a file artifact that 
+								may be associated with one or more steganography 
+								applications. Each file profile within the SAFDB 
+								identifies which steganography application that 
+								artifact belongs to.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Once a list of potential steganography 
+								applications has been compiled, carrier file 
+								types that can be manipulated by those 
+								applications should be identified. To accomplish 
+								this, the computer forensic examiner should 
+								download and experiment with that application. 
+								Next, a focused search should be conducted on 
+								the suspect media for carrier file types that 
+								are manipulated by the particular steganography 
+								application. Finally, the suspect carrier files 
+								can be subjected to further analysis based on 
+								the specific steganographic techniques that can 
+								be used on them.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Once the steganographic technique has been 
+								determined, it may be possible to extract the 
+								hidden information. If strong encryption has 
+								been used prior to hiding the information in the 
+								carrier file, then complex cryptanalysis may 
+								also be necessary to decrypt the extracted 
+								information.</font><p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Research conducted in the SARC has revealed that 
+								some steganography applications leave behind 
+								signatures, or specific byte patterns, that 
+								always appear in a file after hidden information 
+								has been embedded. The signature discovery 
+								process can be very time consuming because each 
+								steganography application must be individually 
+								analyzed to determine how the application embeds 
+								information. Once a signature is discovered, an 
+								automated process must be developed to search 
+								every potential carrier file for that particular 
+								signature.</font><p align="justify">&nbsp;<hr>
+								<p align="left">
+								<font face="Tahoma" size="2" color="#660033">
+								Reference:<br>
+								&quot;About Steganography&quot; page on SARC website.</font></td>
+							</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div align="center">
+				<table border="0" width="982" cellspacing="0" cellpadding="0" id="table5">
+					<tr>
+						<td align="center" height="40" bgcolor="#666699">
+						<font face="Tahoma" size="1" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="5309" endspan --></font></td>
+					</tr>
+					<tr>
+						<td align="center" height="40">
+						<img border="0" src="../images/copyright.gif"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

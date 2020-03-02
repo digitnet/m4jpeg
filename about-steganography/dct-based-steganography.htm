@@ -1,0 +1,173 @@
+<html>
+
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>M4JPEG - Free and Open Source Steganography Software | DCT-based Steganography</title>
+<meta name="description" content="provides basic concepts about dct-based steganography">
+<meta name="keywords" content="dct coefficients, steganography, jpeg, jpg, steganalysis">
+</head>
+
+<STYLE>A {text-decoration: none;} </STYLE>
+
+<body link="#00FFFF" vlink="#00FFFF" alink="#FFFFFF" background="../images/page-background.png" style="background-attachment: fixed">
+
+<div align="center">
+	<table border="0" width="982" cellspacing="0" cellpadding="0" height="82" id="table1">
+		<tr>
+			<td align="left" width="50%">
+			<img border="0" src="../images/main-logo.png"></td>
+			<td align="center" width="25%">&nbsp;</td>
+			<td align="center" width="25%">&nbsp;</td>
+		</tr>
+	</table>
+	<div align="center">
+		<table border="0" width="982" cellspacing="0" cellpadding="0" id="table2">
+			<tr>
+				<td align="center" height="40" background="../images/top-bar.gif">
+				<font face="Tahoma" size="2" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="5309" endspan --></font></td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="120" background="../images/top-banner.png">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+		</table>
+		<div align="center">
+			<table border="1" width="982" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#666699" id="table3">
+				<tr>
+					<td align="center">
+					<div align="center">
+						<table border="0" width="100%" cellspacing="0" cellpadding="10" id="table4">
+							<tr>
+								<td align="center" width="23%" valign="top" background="../images/cell-background.png">
+								<p align="left">
+								<font face="Tahoma" size="2" color="#3333FF">
+								<a style="color: #3333FF; text-decoration: underline" href="information-hiding-and-its-applications.htm">Information Hiding</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="information-hiding-and-its-applications.htm">and its Applications</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="introduction-to-steganography-and-watermarking.htm">Steganography and Watermarking</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="detailed-look-at-steganography.htm">A detailed look at Steganography</a><br>
+&nbsp;&nbsp; &#9702; Text Steganography<br>
+&nbsp;&nbsp; &#9702; Hypertext Steganography<br>
+&nbsp;&nbsp; &#9702; Audio Steganography<br>
+&nbsp;&nbsp; &#9702; Image Steganography<br>
+&nbsp;&nbsp; &#9702; Steganography in Open System<br>
+								<a style="color: #3333FF; text-decoration: underline" href="image-steganography-techniques.htm">Image Steganography Techniques</a><br>
+&nbsp;&nbsp; &#9702; Spatial Domain LSB Insertion<br>
+&nbsp;&nbsp; &#9702; Masking and Filtering<br>
+&nbsp;&nbsp; </font>
+								<font face="Tahoma" size="2" color="#660033">
+								&#9702; DCT-based Steganography</font><font face="Tahoma" size="2" color="#3333FF"><br>
+&nbsp;&nbsp; &#9702; <a style="color: #3333FF; text-decoration: underline" href="wavelet-based-steganography.htm">Wavelet-based Steganography</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="how-to-detect-steganography.htm">How to Detect Steganography</a><br>
+&nbsp;&nbsp; &#9702; Blind Detection<br>
+&nbsp;&nbsp; &#9702; Analytical Detection</font><hr>
+								<p>
+								<a href="reading-room-papers-articles-theses.htm">
+								<img border="0" src="../images/reading-room-left.gif"></a></p>
+								<hr>
+								<p><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank">
+								<font color="#3333FF">GRIN Publishing</font></a></p>
+								<p><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank"><img src="https://cdn.grin.com/images/grin/grin-logo-en.png" style="border: none;" /></a></p>
+								<div style="display: block; width: 200px; height: 100px; background: url('https://cdn.grin.com/images/widgets/search/grin-search-widget-bg-en.gif') no-repeat; position: relative;"><form action="https://www.grin.com/search" method="GET" target="_blank" style="border: none; padding: 0px; margin: 0px;"><input type="hidden" name="partner_id" value="1791783"/><input type="hidden" name="op" value="1"/><input type="text" name="searchstring" style="position: absolute; left: 20px; top: 32px; width: 140px; border: none; box-shadow: none; background: transparent;" /><input type="submit" value="" style="position: absolute; left: 170px; top: 37px; width: 14px; height: 14px; background: transparent url('https://cdn.grin.com/images/widgets/search/search-button.gif') no-repeat top left; border: none; box-shadow: none "/></form><a href="https://www.grin.com/?partner_id=1791783" style="display: block; position: absolute; top: 65px; left: 55px; width: 140px; height: 34px;"> </a></div>
+								<hr>
+								<p>
+								<a href="http://m4jpeg.digitalsd.net/">
+								<img border="0" src="../images/side-banner.png" width="200" height="350"></a><font face="Tahoma" size="2" color="#000066"><br>
+&nbsp;</font></td>
+								<td align="center" width="77%" bgcolor="#F5F5F5" valign="top">
+								<b><font face="Tahoma" size="2" color="#A80054">
+								<br>
+								&nbsp;</font></b><p>&nbsp;</p>
+								<p><b>
+								<font face="Tahoma" size="2" color="#A80054">
+								DCT-based Steganography</font></b></p>
+								<p align="justify">
+								&nbsp;</p>
+								<p align="justify">
+								&nbsp;</p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The 
+								Discrete Cosine Transformation (DCT) is used by 
+								the JPEG compression algorithm, therefore the 
+								DCT-based steganography methods apply only for 
+								jpeg image format. The DCT transformation is 
+								used by the JPEG algorithm to transform 
+								successive 8x8 pixels blocks of the image, into 
+								64 DCT coefficients each. Each 8x8 pixels block 
+								of the image will be transformed into an 8x8 
+								DCTs block by the use of the relation shown 
+								below. Each DCT coefficient F(u , v) of an 8x8 
+								block of image pixels f(x , y) is given by:</font></p>
+								<p>
+								<img border="0" src="../images/dct1.png" width="556" height="70"></p>
+								<p>&nbsp;</p>
+								<font FACE="Tahoma">
+								<p ALIGN="justify">
+								<font size="2" color="#000066">where </font>
+								</font>
+								<font FACE="Tahoma" size="2" color="#000066">
+								C(x) = 1/&#8730;2 when x equals 0 and C(x) = 1 
+								otherwise. After calculating the coefficients, 
+								the following quantizing operation is performed:</font></p>
+								<p>
+								<img border="0" src="../images/dct2.png" width="182" height="63"></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								where Q(u, v) is a 64-element quantization 
+								table. A simple code algorithm to hide a message 
+								inside a JPEG image could look like this:</font></p>
+								<p>
+								<img border="0" src="../images/dct3.png" width="435" height="238"></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								Although a modification of a single DCT will 
+								affect all 64 image pixels, the LSB of the 
+								quantized DCT coefficient can be used to hide 
+								information. Lossless compressed images will be 
+								suspectible to visual alterations when the LSB 
+								are modified. This is not the case with the 
+								above described method, as it takes place in the 
+								frequency domain inside the image, instead of 
+								the spatial domain and therefore there will be 
+								no visible changes to the cover image.</font></p>
+								<hr>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#660033">
+								References:<br>
+								• Steganography and Steganalysis,&nbsp; by J.R. 
+								Krenn,&nbsp; January 2004.</font></td>
+							</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div align="center">
+				<table border="0" width="982" cellspacing="0" cellpadding="0" id="table5">
+					<tr>
+						<td align="center" height="40" bgcolor="#666699">
+						<font face="Tahoma" size="1" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="5309" endspan --></font></td>
+					</tr>
+					<tr>
+						<td align="center" height="40">
+						<img border="0" src="../images/copyright.gif"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

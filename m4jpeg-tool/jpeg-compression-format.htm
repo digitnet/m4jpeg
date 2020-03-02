@@ -1,0 +1,310 @@
+<html>
+
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>M4JPEG - Free and Open Source Steganography Software | JPEG Compression Format</title>
+<meta name="description" content="explains jpeg compression algorithm">
+<meta name="keywords" content="jpeg, jpg, lossy compression, jpeg compression format, jpeg compression algorithm">
+</head>
+
+<STYLE>A {text-decoration: none;} </STYLE>
+
+<body link="#00FFFF" vlink="#00FFFF" alink="#FFFFFF" background="../images/page-background.png" style="background-attachment: fixed">
+
+<div align="center">
+	<table border="0" width="982" cellspacing="0" cellpadding="0" height="82" id="table1">
+		<tr>
+			<td align="left" width="50%">
+			<img border="0" src="../images/main-logo.png"></td>
+			<td align="center" width="25%">&nbsp;</td>
+			<td align="center" width="25%">&nbsp;</td>
+		</tr>
+	</table>
+	<div align="center">
+		<table border="0" width="982" cellspacing="0" cellpadding="0" id="table2">
+			<tr>
+				<td align="center" height="40" background="../images/top-bar.gif">
+				<font face="Tahoma" size="2" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../about-steganography/information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="1117" endspan --></font></td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="120" background="../images/top-banner.png">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+		</table>
+		<div align="center">
+			<table border="1" width="982" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#666699" id="table3">
+				<tr>
+					<td align="center">
+					<div align="center">
+						<table border="0" width="100%" cellspacing="0" cellpadding="10" id="table4">
+							<tr>
+								<td align="center" width="23%" background="../images/cell-background.png" valign="top" rowspan="5">
+								<p style="margin-left: 0px"><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank">
+								<font color="#3333FF">GRIN Publishing</font></a></p>
+								<p style="margin-left: 0px"><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank"><img src="https://cdn.grin.com/images/grin/grin-logo-en.png" style="border: none;" /></a></p>
+								<div style="display: block; width: 200px; height: 100px; background: url('https://cdn.grin.com/images/widgets/search/grin-search-widget-bg-en.gif') no-repeat; position: relative;"><form action="https://www.grin.com/search" method="GET" target="_blank" style="border: none; padding: 0px; margin: 0px;"><input type="hidden" name="partner_id" value="1791783"/><input type="hidden" name="op" value="1"/><input type="text" name="searchstring" style="position: absolute; left: 20px; top: 32px; width: 140px; border: none; box-shadow: none; background: transparent;" /><input type="submit" value="" style="position: absolute; left: 170px; top: 37px; width: 14px; height: 14px; background: transparent url('https://cdn.grin.com/images/widgets/search/search-button.gif') no-repeat top left; border: none; box-shadow: none "/></form><a href="https://www.grin.com/?partner_id=1791783" style="display: block; position: absolute; top: 65px; left: 55px; width: 140px; height: 34px;"> </a></div>
+								<hr>
+								<p style="margin-left: 0px">
+								<a href="http://m4jpeg.digitalsd.net/">
+								<img border="0" src="../images/side-banner.png" width="200" height="350"></a></td>
+								<td align="center" width="38%" bgcolor="#F5F5F5">
+								&nbsp;&nbsp;
+								<img border="0" src="../images/jpeg.jpg" width="250" height="187"></td>
+								<td align="center" width="39%" bgcolor="#F5F5F5">
+								<b><font face="Tahoma" size="2" color="#660033">Image Compression Using JPEG Algorithm</font></b><p>
+								<b><font face="Tahoma" size="2" color="#660033">by&nbsp;&nbsp; V.S. Arun</font></b></td>
+							</tr>
+							<tr>
+								<td align="center" width="77%" bgcolor="#F5F5F5" valign="top" colspan="2">
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">JPEG is a standardized image compression 
+								mechanism. JPEG stands for Joint Photographic 
+								Experts Group, the original name of the 
+								committee that wrote the standard. JPEG is 
+								designed for compressing either full-color or 
+								gray scale digital images of &quot;natural&quot;, real 
+								world scenes. It does not work very well on 
+								non-realistic images, such as cartoons or line 
+								drawings. JPEG does not handle black - and - 
+								white
+								(l - bit - per - pixel) images, nor does it 
+								handle motion picture compression.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Regular JPEG is &quot;lossy&quot;. meaning that the image 
+								that gets out of decompression isn't quite 
+								identical to what originally put in. The 
+								algorithm achieves much of its compression by 
+								exploiting known limitations of the human eye, 
+								notably the fact that small color details aren't 
+								perceived as well as small details of 
+								light-and-dark. This way of achieving 
+								compression is by psycho visual redundancy and 
+								inter-pixel redundancy. Thus, JPEG is intended 
+								for compressing images that will be looked at by 
+								humans. The JPEG standard includes a separate 
+								lossless mode, but it is rarely used and does 
+								not give nearly as much compression as the lossy 
+								mode.</font></p>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" width="77%" bgcolor="#F5F5F5" valign="top" colspan="2">
+								<img border="0" src="../images/jpeg-compression-format.png" width="602" height="394"></td>
+							</tr>
+							<tr>
+								<td align="center" width="77%" bgcolor="#F5F5F5" valign="top" colspan="2">
+								<p>
+								</p>
+								<p align="justify">
+								&nbsp;</p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066"><b>
+								Outline of the Baseline Compression Algorithm:</b><br>
+								<br>
+								<b>1.</b>&nbsp; Image is transformed into a 
+								suitable color space. This is a no-op for 
+								grayscale, but for color images we generally 
+								want to transform RGB into a 
+								luminance/chrominance color space (YCbCr, YUV, 
+								etc). The luminance component is grayscale and 
+								the other two axes are color information. The 
+								reason for doing this is that we can afford to 
+								lose a lot more information in the chrominance 
+								components than we can in the luminance 
+								component. The human eye is not as sensitive to 
+								high-frequency chroma info as it is to 
+								high-frequency luminance. However, compression 
+								will be less since we will have to code all the 
+								components at luminance quality. The color-space 
+								transformation is slightly lossy due to round 
+								off error, but the amount of error is much 
+								smaller than what we typically introduce later 
+								on.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066"><b>
+								2.</b> The pixel values for each component are 
+								grouped into 8x8 blocks. Each 8x8 block is 
+								transformed through a discrete cosine transform 
+								(DCT). The DCT is a relative of the Fourier 
+								transform and likewise gives a frequency map, 
+								with 8x8 components. Thus we now have numbers 
+								representing the average value in each block and 
+								successively higher-frequency changes within the 
+								block. The motivation for doing this is that we 
+								can now throw away high-frequency information 
+								without affecting low-frequency information.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066"><b>
+								3.</b> In each block, each of the 64 frequency 
+								components are divided by a separate 
+								&quot;quantization coefficient&quot;, and the results are 
+								rounded to integers. This is the fundamental 
+								Information-losing step. The larger the 
+								quantization coefficients, the more data are 
+								discarded. Even the minimum possible 
+								quantization coefficient, 1, loses some info. 
+								because the exact DCT outputs are typically not 
+								integers. Higher frequencies are always 
+								quantized less accurately (given larger 
+								coefficients) than lower, since they are less 
+								visible to the eye. Also, the luminance data is 
+								typically quantized more accurately than the 
+								chroma data, by using separate 64- element 
+								quantization tables. Tuning the quantization 
+								tables for best results is something of a black 
+								art, and is an active research area. Most 
+								existing encoders use simple linear scaling of 
+								the example tables given in the JPEG standard, 
+								using a single user-specified &quot;quality&quot; setting 
+								to determine the scaling multiplier. This works 
+								fairly well for midrange qualities but is quite 
+								non optimal at very high or low quality 
+								settings.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066"><b>
+								4.</b> These quantized 8X8 blocks are scanned in 
+								a zigzag passion. While scanning only those 
+								frequency components, which are of interest, are 
+								selected and remaining are neglected. Basically 
+								zigzag scan is performed to retain DC and Low 
+								frequency information and neglect high frequency 
+								information.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066"><b>
+								5.</b> Zigzag coefficients are encoded using 
+								Run length and Huffman coding. This step is 
+								lossless, so it doesn't affect image quality.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066"><b>
+								6. </b>Tack on appropriate headers, etc, and 
+								output the result. In a normal &quot;interchange&quot; 
+								JPEG file, all of the compression parameters are 
+								included in the headers so that the decompressor 
+								can reverse the process. These parameters 
+								include the quantization tables and the Huffman 
+								coding tables. For specialized applications, the 
+								spec permits those tables to be omitted from the 
+								file; this saves several hundred bytes of 
+								overhead, but it means that the decompressor 
+								must know a-priori what tables the compressor 
+								used. Omitting the tables is safe only in closed 
+								systems.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The decompression algorithm reverses this 
+								process. The decompressor multiplies the reduced 
+								coefficients by the quantization table entries 
+								to produce approximate DCT coefficients. Since 
+								these are only approximate, the reconstructed 
+								pixel values are also approximate, but if the 
+								design has done what it's supposed to do, the 
+								errors won't be highly visible. A high-quality 
+								decompressor will typically add some smoothing 
+								steps to reduce pixel-to-pixel discontinuities.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">The JPEG standard does not specify the exact 
+								behavior of compressors and decompressors, so 
+								there's some room for creative implementation. 
+								In particular, implementations can trade off 
+								speed against image quality by choosing more 
+								accurate or faster-but-less-accurate 
+								approximations to the DCT. Similar tradeoffs 
+								exist for the down sampling/up sampling and 
+								colorspace conversion steps. (The spec does 
+								include some minimum accuracy requirements for 
+								the DCT step, but these are widely ignored, and 
+								are not too meaningful anyway in the absence of 
+								accuracy requirements for the other lossy 
+								steps.)</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066"><b>Extensions:</b><br>
+								<br>
+								The progressive mode is intended to support 
+								real-time transmission of
+								images. It allows the DCT coefficients to
+								be sent piecemeal in multiple &quot;scans&quot; of
+								the image. With each scan, the decoder
+								can produce a higher-quality rendition of
+								the image. Thus a low-quality preview
+								can be sent very quickly, then refined as
+								time allows. The total space needed is
+								roughly the same as for a baseline JPEG image of 
+								the same final quality. The decoder must do 
+								essentially a full JPEG decode cycle for each 
+								scan: inverse DCT, up sample, and color 
+								conversion must all be done again, not to 
+								mention any color quantization for 8-bit 
+								displays. So this scheme is useful only with 
+								fast decoders or slow transmission lines.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066"><b>
+								Conclusions:</b><br>
+								<br>
+								Image compression is an extremely important part 
+								of modern computing. By having the ability to 
+								compress images to a fraction of their original 
+								size, valuable (and expensive) disk space can be 
+								saved. In addition, transportation of images 
+								from one computer to another becomes easier and 
+								less time consuming (which is why image 
+								compression has played such an important role in 
+								the development of the Internet). The JPEG image 
+								compression algorithm provides a very effective 
+								way to compress images with minimal loss in 
+								quality. Although the actual implementation of 
+								the JPEG algorithm is more difficult than other 
+								image formats, (such as GIF) and the actual 
+								compression of images is expensive 
+								computationally, the high compression ratios 
+								that can be routinely attained using the JPEG 
+								algorithm easily compensate for the amount of 
+								time spent implementing the algorithm and 
+								compressing an image.</font></p><hr>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" width="77%" bgcolor="#F5F5F5" valign="top" colspan="2">
+								<p align="left">
+								<font face="Tahoma" size="2" color="#660033">For 
+								more detailed information about JPEG algorithm:<br>
+								</font>
+								<font size="2" color="#660033" face="Times New Roman">
+								• </font>
+								<font face="Tahoma" size="2" color="#660033">The 
+								JPEG Still Picture Compression Standard, by 
+								Gregory K. Wallace, December 1991.</font></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div align="center">
+				<table border="0" width="982" cellspacing="0" cellpadding="0" id="table5">
+					<tr>
+						<td align="center" height="40" bgcolor="#666699">
+						<font face="Tahoma" size="1" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../about-steganography/information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="1117" endspan --></font></td>
+					</tr>
+					<tr>
+						<td align="center" height="40">
+						<img border="0" src="../images/copyright.gif"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

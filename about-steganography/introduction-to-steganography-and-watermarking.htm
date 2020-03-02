@@ -1,0 +1,286 @@
+<html>
+
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>M4JPEG - Free and Open Source Steganography Software | Introduction to Steganography and Watermarking</title>
+<meta name="description" content="provides general concepts about steganography and watermarking">
+<meta name="keywords" content="information hiding, steganography, watermarking">
+</head>
+
+<STYLE>A {text-decoration: none;} </STYLE>
+
+<body link="#00FFFF" vlink="#00FFFF" alink="#FFFFFF" background="../images/page-background.png" style="background-attachment: fixed">
+
+<div align="center">
+	<table border="0" width="982" cellspacing="0" cellpadding="0" height="82" id="table1">
+		<tr>
+			<td align="left" width="50%">
+			<img border="0" src="../images/main-logo.png"></td>
+			<td align="center" width="25%">&nbsp;</td>
+			<td align="center" width="25%">&nbsp;</td>
+		</tr>
+	</table>
+	<div align="center">
+		<table border="0" width="982" cellspacing="0" cellpadding="0" id="table2">
+			<tr>
+				<td align="center" height="40" background="../images/top-bar.gif">
+				<font face="Tahoma" size="2" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="5309" endspan --></font></td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="120" background="../images/top-banner.png">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" height="20">
+				&nbsp;</td>
+			</tr>
+		</table>
+		<div align="center">
+			<table border="1" width="982" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#666699" id="table3">
+				<tr>
+					<td align="center">
+					<div align="center">
+						<table border="0" width="100%" cellspacing="0" cellpadding="10" id="table4">
+							<tr>
+								<td align="center" width="23%" valign="top" background="../images/cell-background.png">
+								<p align="left">
+								<font face="Tahoma" size="2" color="#3333FF">
+								<a style="color: #3333FF; text-decoration: underline" href="information-hiding-and-its-applications.htm">Information Hiding</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="information-hiding-and-its-applications.htm">and its Applications</a><br>
+								</font>
+								<font face="Tahoma" size="2" color="#660033">
+								Steganography and Watermarking</font><font face="Tahoma" size="2" color="#3333FF"><br>
+								<a style="color: #3333FF; text-decoration: underline" href="detailed-look-at-steganography.htm">A detailed look at Steganography</a><br>
+&nbsp;&nbsp; &#9702; Text Steganography<br>
+&nbsp;&nbsp; &#9702; Hypertext Steganography<br>
+&nbsp;&nbsp; &#9702; Audio Steganography<br>
+&nbsp;&nbsp; &#9702; Image Steganography<br>
+&nbsp;&nbsp; &#9702; Steganography in Open System<br>
+								<a style="color: #3333FF; text-decoration: underline" href="image-steganography-techniques.htm">Image Steganography Techniques</a><br>
+&nbsp;&nbsp; &#9702; Spatial Domain LSB Insertion<br>
+&nbsp;&nbsp; &#9702; Masking and Filtering<br>
+&nbsp;&nbsp; &#9702; <a style="color: #3333FF; text-decoration: underline" href="dct-based-steganography.htm">DCT-based Steganography</a><br>
+&nbsp;&nbsp; &#9702; <a style="color: #3333FF; text-decoration: underline" href="wavelet-based-steganography.htm">Wavelet-based Steganography</a><br>
+								<a style="color: #3333FF; text-decoration: underline" href="how-to-detect-steganography.htm">How to Detect Steganography</a><br>
+&nbsp;&nbsp; &#9702; Blind Detection<br>
+&nbsp;&nbsp; &#9702; Analytical Detection</font><hr>
+								<p>
+								<a href="reading-room-papers-articles-theses.htm">
+								<img border="0" src="../images/reading-room-left.gif"></a></p>
+								<hr>
+								<p><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank">
+								<font color="#3333FF">GRIN Publishing</font></a></p>
+								<p><a href="https://www.grin.com/en/?partner_id=1791783" target="_blank"><img src="https://cdn.grin.com/images/grin/grin-logo-en.png" style="border: none;" /></a></p>
+								<div style="display: block; width: 200px; height: 100px; background: url('https://cdn.grin.com/images/widgets/search/grin-search-widget-bg-en.gif') no-repeat; position: relative;"><form action="https://www.grin.com/search" method="GET" target="_blank" style="border: none; padding: 0px; margin: 0px;"><input type="hidden" name="partner_id" value="1791783"/><input type="hidden" name="op" value="1"/><input type="text" name="searchstring" style="position: absolute; left: 20px; top: 32px; width: 140px; border: none; box-shadow: none; background: transparent;" /><input type="submit" value="" style="position: absolute; left: 170px; top: 37px; width: 14px; height: 14px; background: transparent url('https://cdn.grin.com/images/widgets/search/search-button.gif') no-repeat top left; border: none; box-shadow: none "/></form><a href="https://www.grin.com/?partner_id=1791783" style="display: block; position: absolute; top: 65px; left: 55px; width: 140px; height: 34px;"> </a></div>
+								<hr>
+								<p>
+								<a href="http://m4jpeg.digitalsd.net/">
+								<img border="0" src="../images/side-banner.png" width="200" height="350"></a></p>
+								<p>&nbsp;</p>
+								<p><font face="Tahoma" size="2" color="#000066">
+								<br>
+&nbsp;</font></td>
+								<td align="center" width="77%" bgcolor="#F5F5F5" valign="top">
+								<p>
+								<font face="Tahoma" size="2" color="#A80054"><b>
+								<br>
+								Introduction</b></font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">
+								<br>
+								The earliest recordings of Steganography were by 
+								the Greek historian Herodotus in his chronicles 
+								known as &quot;Histories&quot; and date back to around 440 
+								BC. Herodotus recorded two stories of 
+								Steganographic techniques during this time in 
+								Greece. The first stated that King Darius of 
+								Susa shaved the head of one of his prisoners and 
+								wrote a secret message on his scalp. When the 
+								prisoner’s hair grew back, he was sent to the 
+								Kings son in law Aristogoras in Miletus 
+								undetected. The second story also came from 
+								Herodotus, which claims that a soldier named 
+								Demeratus needed to send a message to Sparta 
+								that Xerxes intended to invade Greece. Back 
+								then, the writing medium was text written on 
+								wax-covered tablets. Demeratus removed the wax 
+								from the tablet, wrote the secret message on the 
+								underlying wood, recovered the tablet with wax 
+								to make it appear as a blank tablet and finally 
+								sent the document without being detected.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Romans used invisible inks, which were based on 
+								natural substances such as fruit juices and 
+								milk. This was accomplished by heating the 
+								hidden text, thus revealing its contents. 
+								Invisible inks have become much more advanced 
+								and are still in limited use today.
+								During the 15th and 16th centuries, many writers 
+								wrote on Steganographic techniques such as 
+								coding techniques for text, invisible inks, and 
+								incorporating hidden messages in music.</font></p>
+								<p align="left">
+								<font face="Tahoma" size="2" color="#A80054">
+								<b>Steganography:</b></font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Steganography or Stego as it is often referred 
+								to in the IT community, literally means, 
+								&quot;Covered writing&quot; which is derived from the 
+								Greek language. Steganography is also defined as 
+								follows, &quot;Steganography is the art and science 
+								of communicating in a way which hides the 
+								existence of the communication. In contrast to 
+								Cryptography, where the enemy is allowed to 
+								detect, intercept and modify messages without 
+								being able to violate certain security premises 
+								guaranteed by a cryptosystem, the goal of 
+								Steganography is to hide messages inside other 
+								harmless messages in a way that does not allow 
+								any enemy to even detect that there is a second 
+								message present&quot;.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">In a digital world, Steganography and 
+								Cryptography are both intended to protect 
+								information from unwanted parties. Both 
+								Steganography and Cryptography are excellent 
+								means by which to accomplish this but neither 
+								technology alone is perfect and both can be 
+								broken. It is for this reason that most experts 
+								would suggest using both to add multiple layers 
+								of security.<br>
+								Steganography can be used in a large amount of 
+								data formats in the digital world of today. The 
+								most popular data formats used are .bmp, .doc, 
+								.gif, .jpeg, .mp3, .txt and .wav. Mainly because 
+								of their popularity on the Internet and the ease 
+								of use of the steganographic tools that use 
+								these data formats. These formats are also 
+								popular because of the relative ease by which 
+								redundant or noisy data can be removed from them 
+								and replaced with a hidden message. Steganographic technologies are a very important 
+								part of the future of Internet security and 
+								privacy on open systems such as the Internet. 
+								Steganographic research is primarily driven by 
+								the lack of strength in the cryptographic 
+								systems on their own and the desire to have 
+								complete secrecy in an open-systems environment.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Many governments have created laws that either 
+								limit the strength of cryptosystems or prohibit 
+								them completely. This has been done primarily 
+								for fear by law enforcement not to be able to 
+								gain intelligence by wiretaps, etc. This 
+								unfortunately leaves the majority of the 
+								Internet community either with relatively weak 
+								and a lot of the times breakable encryption 
+								algorithms or none at all. Civil liberties 
+								advocates fight this with the argument that 
+								“these limitations are an assault on privacy”. 
+								This is where Steganography comes in. 
+								Steganography can be used to hide important data 
+								inside another file so that only the parties 
+								intended to get the message even knows a secret 
+								message exists. To add multiple layers of 
+								security and to help subside the &quot;crypto versus 
+								law&quot; problems previously mentioned, it is a good 
+								practice to use Cryptography and Steganography 
+								together. As mentioned earlier, neither 
+								Cryptography nor Steganography are considered 
+								&quot;turnkey solutions&quot; to open systems privacy, but 
+								using both technologies together can provide a 
+								very acceptable amount of privacy for anyone 
+								connecting to and communicating over these 
+								system.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#A80054"><b>Watermarking:</b></font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">Watermarking can be described as a method for 
+								embedding information into another signal. In 
+								case of digital images, the embedded information 
+								can be either visible or hidden from the user.
+								Typical usage scenarios for watermarking are 
+								copyright protection and data authentication. 
+								The distinction between steganography and 
+								watermarking is not always clear. Basically, in 
+								case of watermarking the additional information 
+								is used to protect the original image (in case 
+								of copyright management), whereas in the 
+								Steganography the image is used to protect the 
+								additional information (secret messages). By 
+								definition, the visible watermarks are not 
+								included in Steganography.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">During the past ten years, digital watermarking 
+								has attracted the attention of numerous 
+								researchers. As a result, hundreds of studies 
+								have been published concerning the different 
+								methods for watermarking. The information 
+								embedded as a watermark can be almost anything. 
+								It can be a bit string representing copyright 
+								message, serial number, plain text, etc. 
+								However, sometimes it can be more useful to 
+								embed a visual watermark (corporate logo) 
+								instead of a bit string as a watermark.
+								One of the first techniques for watermarking is 
+								the least-significant bit modification. It is 
+								based on the substitution of LSB plane of the 
+								cover image with the given watermark.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">It is desirable that the watermark can not be 
+								removed from the cover image. However, several 
+								intentional and unintentional operations with 
+								the watermarked image may provide possibility 
+								for disabling the watermark. Commonly, these 
+								operations (especially the intentional ones) are 
+								referred as attacks against watermarks.</font></p>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#000066">An interesting application for digital 
+								watermarking is image authentication. With the 
+								help of advanced image editing software, digital 
+								images can be manipulated maliciously. In image 
+								authentication, a specific watermark is inserted 
+								into image, so that all attempts to manipulate 
+								the content of the image will alter the 
+								watermark also.</font></p><hr>
+								<p align="justify">
+								<font face="Tahoma" size="2" color="#660033">
+								Reference:<br>
+								</font>
+								<font size="2" color="#660033" face="Times New Roman">
+								• </font>
+								<font face="Tahoma" size="2" color="#660033">A 
+								Detailed Look at Steganographic Techniques and 
+								their Use in an Open-Systems Environment, by 
+								Bret Dunbar, January 2002.</font></p></td>
+							</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div align="center">
+				<table border="0" width="982" cellspacing="0" cellpadding="0" id="table5">
+					<tr>
+						<td align="center" height="40" bgcolor="#666699">
+						<font face="Tahoma" size="1" color="#FFFFFF">
+				<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="html" S-Bar="Bars" S-Btn-Nml="&lt;A HREF=&quot;#URL#&quot; TARGET=&quot;#TARGET#&quot; STYLE=&quot;{text-decoration: none;}&quot;&gt;#LABEL#&lt;/A&gt;" S-Btn-Sel="#LABEL#" S-Btn-Sep="&amp;nbsp;|&amp;nbsp;" S-Type="global" B-Include-Home="TRUE" B-Include-Up="FALSE" startspan --><nobr><A HREF="../index.htm" TARGET="" STYLE="{text-decoration: none;}">Home</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="information-hiding-and-its-applications.htm" TARGET="" STYLE="{text-decoration: none;}">Introduction&nbsp;to&nbsp;Steganography</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/about-dct-based-mod4-method.htm" TARGET="" STYLE="{text-decoration: none;}">About&nbsp;Mod4&nbsp;Method</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/how-m4jpeg-tool-works%20.htm" TARGET="" STYLE="{text-decoration: none;}">How&nbsp;M4JPEG&nbsp;Tool&nbsp;Works</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../m4jpeg-tool/m4jpeg-download-page.htm" TARGET="" STYLE="{text-decoration: none;}">Download&nbsp;Page</A></nobr>&nbsp;|&nbsp;<nobr><A HREF="../contact-us.htm" TARGET="" STYLE="{text-decoration: none;}">Contact&nbsp;Us</A></nobr><!--webbot bot="Navigation" i-checksum="5309" endspan --></font></td>
+					</tr>
+					<tr>
+						<td align="center" height="40">
+						<img border="0" src="../images/copyright.gif"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
