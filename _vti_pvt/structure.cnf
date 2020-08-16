@@ -3,15 +3,15 @@
 1000,index.htm,0,Home Page,0,1544350967,2
 vti_globalpage:BW|true
 vti_nonnavpage:BW|false
-1017,about-steganography/information-hiding-and-its-applications.htm,0,Introduction to Steganography,0,1566314176,1
+1017,about-steganography/information-hiding-and-its-applications.htm,0,Introduction to Steganography,0,1597417394,1
 vti_globalpage:BW|true
-1029,m4jpeg-tool/about-dct-based-mod4-method.htm,0,About Mod4 Method,0,1575381686,1
+1029,m4jpeg-tool/dct-based-mod4-compared-to-f5.htm,0,Mod4 vs F5,0,1597586103,1
 vti_globalpage:BW|true
-1003,m4jpeg-tool/how-m4jpeg-tool-works .htm,0,How M4JPEG Tool Works,0,1575372516,1
+1003,m4jpeg-tool/how-m4jpeg-tool-works.htm,0,How M4JPEG Works,0,1597586649,1
 vti_globalpage:BW|true
-1028,m4jpeg-tool/m4jpeg-download-page.htm,0,Download Page,0,1580048618,1
+1028,m4jpeg-tool/m4jpeg-download.htm,0,M4JPEG Download,0,1597585613,1
 vti_globalpage:BW|true
-1005,contact-us.htm,0,Contact Us,0,1377281753,1
+1006,m4jpeg-tool/phil-sallee-matlab-jpeg-toolbox.htm,0,Matlab JPEG Toolbox,0,1597495458,1
 vti_globalpage:BW|true
 1009,about-steganography/introduction-to-steganography-and-watermarking.htm,0,Introduction to Steganography and Watermarking,1017,1377536022,1
 vti_globalpage:BW|false
@@ -21,12 +21,6 @@ vti_globalpage:BW|false
 1014,about-steganography/wavelet-based-steganography.htm,0,Wavelet-based Steganography,1017,1377539793,0
 1018,about-steganography/how-to-detect-steganography.htm,0,How to Detect Steganography,1017,1377853248,0
 1020,about-steganography/reading-room-papers-articles-theses.htm,0,Reading Room,1017,1570733180,0
-1004,m4jpeg-tool/jpeg-compression-format.htm,0,Jpeg Format,1003,1573557556,1
-vti_globalpage:BW|false
-1006,m4jpeg-tool/phil-sallee-matlab-jpeg-toolbox.htm,0,Phil Sallee's Toolbox,1003,1573557556,1
-vti_globalpage:BW|false
-1027,m4jpeg-tool/m4jpeg140installer-web-download-page.htm,0,M4JPEG140Installer_web Download Page,1028,1573807311,0
-1025,m4jpeg-tool/m4jpeg140installer-mcr-download-page .htm,0,M4JPEG140Installer_mcr Download Page,1028,1573807279,0
 1021,about-steganography/overview-papers-and-articles-about-steganography-and-steganalysis.htm,0,Overview Papers and Articles,1020,1388750704,0
 1022,about-steganography/articles-and-papers-about-image-based-steganography-methods.htm,0,Image-based Steganography Methods,1020,1388750406,0
 1023,about-steganography/theses-about-steganography-and-steganalysis.htm,0,Theses about Steganography,1020,1388750211,0
